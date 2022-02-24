@@ -3,7 +3,14 @@ import configValue from "./config";
 
 export default function App() {
     return (
-        <>
+        <div>
+            <header className="p-14 rounded-br-full relative text-white text-center">
+                <h1 className="absolute cursor-pointer rotate-[-4.79deg] top-5 right-10 headline">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z" class="clr-i-outline clr-i-outline-path-1"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                </h1>
+                <h1 className="title">The Dynamics Theme</h1>
+            </header>
+
             <section>
                 <h1 className="heading container-regular">
                     Containers
@@ -78,7 +85,9 @@ export default function App() {
                             <button className="cta-button-small">Small cta btn</button>
                         </div>
                         <div>
-                            <button className="cta-button-big">Big arrow btn &rarr;</button>
+                            <button className="cta-button-big">
+                                Big arrow btn<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z"/></svg>
+                            </button>
                         </div>
                         <div>
                             <button className="cta-button-medium">Medium arrow btn &rarr;</button>
@@ -121,9 +130,88 @@ export default function App() {
                 </div>
 
                 <div className="mb-3">
+                    <h1 className="heading">Forms</h1>
+                    <form>
+                        <div className="md:grid grid-cols-2 gap-20 mb-3">
+                            <div className="flex flex-col gap-5">
+                                <div>
+                                    <h1 className="text-30px">Full name</h1>
+                                    <input className="form-input" placeholder="Sample name" type="text"/>
+                                </div>
+                                <div className="form-checkbox">
+                                    <input id="checkbox" type="checkbox"/>
+                                    <label for="checkbox">Checkbox</label>
+                                </div>
+                                <div>
+                                    <h1 className="text-30px">Expandable form</h1>
+                                    <textarea className="form-input" placeholder="Sample text is like in two or three sentences"/>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-5">
+                                <div>
+                                    <h1 className="text-30px">Drop down list</h1>
+                                    <select className="form-input">
+                                        <option>Fruit</option>
+                                        <option>Vegetables</option>
+                                        <option>Ice cream</option>
+                                        <option>None of the above</option>
+                                    </select>
+                                </div>
+                                <div className="form-radio">
+                                    <input id="radio" type="radio"/>
+                                    <label for="radio">Radio</label>
+                                </div>
+                                <div>
+                                    <h1 className="text-30px">Slider bar</h1>
+                                    <input className="form-range" type="range"/>
+                                </div>
+                            </div>
+                        </div>
+                        <button className="form-button" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div className="mb-3">
+                    <h1 className="heading">Colors</h1>
+                    <div className="p-3">
+                        <h1 className="heading">Primary Colors</h1>
+                        <div className="md:grid grid-cols-3 gap-2 mb-2">
+                            <div className="bg-deep-sky-blue font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>Deep Sky Blue</h1>
+                                <h1>#03A9F4</h1>
+                            </div>
+                            <div className="bg-fruit-salad font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>Fruit Salad</h1>
+                                <h1>#4CAF50</h1>
+                            </div>
+                            <div className="bg-orange-peel font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>Orange Peel</h1>
+                                <h1>#FF9800</h1>
+                            </div>
+                        </div>
+                        <h1 className="heading">Other Notable Colors</h1>
+                        <div className="md:grid grid-cols-3 gap-2 mb-2">
+                            <div className="bg-link font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>For links</h1>
+                                <h1>#3B4FE4</h1>
+                            </div>
+                            <div className="bg-heading font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>For headings</h1>
+                                <h1>#1A1A1A</h1>
+                            </div>
+                            <div className="bg-body font-bold p-5 rounded text-center text-24px text-white uppercase">
+                                <h1>For body text</h1>
+                                <h1>#6E7180</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mb-3">
                     <h1 className="heading">Sample paragraph text</h1>
                     <div className="rounded p-3 md:p-10 shadow">
-                        <p>This is a whole paragraph of text, include code like this, as well as linked code & regular links. The paragraph ended up being 1 sentence, but now I guess it’s two.</p>
+                        <p className="mb-2">This is a whole paragraph of text, include <code>code like this</code>, as well as <code><a href="#">linked code</a></code> & <a href="#">regular links</a>. The paragraph ended up being 1 sentence, but now I guess it’s <b>two</b>.</p>
+                        <pre>Here's a code block! No highlighting to be found.</pre>
                     </div>
                 </div>
 
@@ -159,6 +247,6 @@ export default function App() {
 
                 <pre>{configValue}</pre>
             </main>
-        </>
+        </div>
     );
 }
