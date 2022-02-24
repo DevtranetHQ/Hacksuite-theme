@@ -39,7 +39,7 @@
     }
 
     p {
-        @apply text-[22px];
+        @apply text-[20px] md:text-[22px];
     }
 
     /*
@@ -54,7 +54,7 @@
     }
 
     pre {
-        @apply bg-[#e0e0e0] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[1.25rem] text-[#4d4d4d];
+        @apply bg-[#e0e0e0] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[20px] md:text-[22px] text-[#4d4d4d];
     }
 }
 
@@ -63,11 +63,11 @@
      * Typography
      */
     .heading {
-        @apply font-bold text-36px md:text-42px;
+        @apply font-bold text-36px md:text-42px leading-[100px];
     }
 
     .ultratitle {
-        @apply font-bold text-66px md:text-120px;
+        @apply font-bold text-66px md:text-120px leading-[100px];
     }
 
     .title {
@@ -102,20 +102,20 @@
      * Buttons
      */
     .button-big, .button-medium, .button-small {
-        @apply flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-1 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
+        @apply leading-snug flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
     }
 
     .outline-button-big, .outline-button-medium, .outline-button-small {
-        @apply flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-1 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
+        @apply flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
     }
 
     .cta-button-big, .cta-button-medium, .cta-button-small {
-        @apply flex items-center justify-center font-bold px-5 py-1 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
+        @apply leading-tight flex items-center justify-center font-bold px-3 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
         background: linear-gradient(98.64deg, #FFFFFF -26.46%, #03A9F4 56.71%);
     }
 
     .button-big, .outline-button-big, .cta-button-big {
-        @apply text-36px;
+        @apply text-30px md:text-36px;
     }
 
     .button-medium, .outline-button-medium, .cta-button-medium, form button {
@@ -130,7 +130,7 @@
      * Cards
      */
     .card-primary, .card-sunken, .card-interactive, .card-gradient-text, .card-gradient {
-        @apply mb-3 p-3 rounded text-center;
+        @apply mb-5 p-3 rounded text-center;
     }
 
     .card-primary, .card-interactive, .card-gradient-text {
@@ -143,7 +143,7 @@
     }
 
     .card-interactive {
-        @apply cursor-pointer hover:shadow-lg;
+        @apply cursor-pointer transition-all hover:scale-105 focus:scale-105;
     }
 
     .card-gradient-text h1 {
@@ -157,7 +157,7 @@
     }
 
     .card-translucent, .card-translucent-dark {
-        @apply mb-3 p-10 text-center;
+        @apply mb-5 p-10 text-center;
     }
 
     .card-translucent {
@@ -172,22 +172,23 @@
      * Badges
      */
     .pill-badge {
-        @apply border-deep-sky-blue border-[3px] bg-deep-sky-blue inline-block mb-2 mr-2 px-5 py-1 rounded-full text-center text-24px text-white;
+        @apply border-deep-sky-blue border-[3px] bg-deep-sky-blue inline-block mb-2 mr-2 px-10 py-3 rounded-full text-center font-bold text-[14px] md:text-18px text-white;
     }
 
     .outline-badge {
-        @apply border-deep-sky-blue border-[3px] inline-block mb-2 mr-2 px-5 py-1 rounded-full text-center text-24px text-deep-sky-blue;
+        @apply border-deep-sky-blue border-[3px] inline-block mb-2 mr-2 px-10 py-3 rounded-full text-center font-bold text-[14px] md:text-18px text-deep-sky-blue;
     }
 
     /*
      * Form components
      */
     form {
-        @apply bg-[#E8E8E8] p-3 md:p-10 rounded;
+        @apply bg-[#E8E8E8] p-5 md:p-10 rounded;
     }
 
     .form-button {
         @apply flex items-center justify-center min-w-[64%] bg-deep-sky-blue font-bold px-5 py-1 mx-auto rounded-md text-white text-24px transition-all hover:scale-105 focus:scale-105;
+        background: linear-gradient(98.64deg, #FFFFFF -26.46%, #03A9F4 56.71%);
     }
 
     .form-input {
@@ -195,16 +196,25 @@
         outline: none !important;
     }
 
+    .form-select {
+        @apply appearance-none text-18px bg-white border-[#c1c1c1] border block w-full px-3 py-2 rounded;
+        background-image: url("data:image/svg+xml,%3Csvg width='19' height='14' viewBox='0 0 19 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.78074 13.1229C8.86101 13.2395 8.96842 13.3348 9.09372 13.4006C9.21902 13.4665 9.35844 13.5009 9.49999 13.5009C9.64154 13.5009 9.78097 13.4665 9.90626 13.4006C10.0316 13.3348 10.139 13.2395 10.2192 13.1229L18.0942 1.74788C18.1854 1.61668 18.2388 1.463 18.2488 1.30356C18.2587 1.14411 18.2248 0.984983 18.1507 0.84347C18.0765 0.701957 17.965 0.583467 17.8283 0.500876C17.6915 0.418285 17.5347 0.374749 17.375 0.375001H1.62499C1.4656 0.375659 1.30941 0.419754 1.17321 0.502544C1.03701 0.585333 0.925955 0.703684 0.851988 0.84487C0.778021 0.986056 0.74394 1.14473 0.753411 1.30384C0.762882 1.46295 0.815546 1.61646 0.90574 1.74788L8.78074 13.1229Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 2% center;
+        background-size: 12px;
+        outline: none !important;
+    }
+
     .form-checkbox, .form-radio {
-        @apply cursor-pointer flex gap-2 items-center text-18px leading-[18px];
+        @apply cursor-pointer flex gap-1 md:gap-2 items-center text-18px leading-[18px];
     }
 
     .form-checkbox label {
-        @apply self-end;
+        @apply cursor-pointer self-end;
     }
 
     .form-checkbox input[type="checkbox"] {
-        @apply appearance-none h-[20px] w-[20px] border-2 border-[#1a1a1a] rounded-sm bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none transition-all duration-200 bg-no-repeat bg-center bg-contain float-left cursor-pointer;
+        @apply appearance-none h-[20px] w-[20px] border-2 border-[#1a1a1a] rounded-sm bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
     }
 
     .form-checkbox input[type="checkbox"]:checked {
@@ -212,7 +222,7 @@
     }
 
     .form-radio input[type="radio"] {
-        @apply appearance-none rounded-full h-[20px] w-[20px] border-2 border-[#1a1a1a] bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none transition-all duration-200 bg-no-repeat bg-center bg-contain float-left cursor-pointer;
+        @apply appearance-none rounded-full h-[20px] w-[20px] border-2 border-[#1a1a1a] bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
     }
 
     .form-radio input[type="radio"]:checked {
