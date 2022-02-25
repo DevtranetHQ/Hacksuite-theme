@@ -233,7 +233,7 @@ export default function App() {
                 {/* Sample paragraph */}
                 <h1 className="heading mb-5">Sample paragraph text</h1>
                 <div className="rounded p-3 md:p-10 shadow">
-                    <p className="mb-2">This is a whole paragraph of text, include <code>code like this</code>, as well as <code><a href="#">linked code</a></code> & <a href="#">regular links</a>. The paragraph ended up being 1 sentence, but now I guess it’s <b>two</b>.</p>
+                    <p className="mb-2">This is a whole paragraph of text, include <code>code like this</code>, as well as <code><a href="https://theme.thedynamics.tech">linked code</a></code> & <a href="https://theme.thedynamics.tech">regular links</a>. The paragraph ended up being 1 sentence, but now I guess it’s <b>two</b>.</p>
                     <pre>Here's a code block! No highlighting to be found.</pre>
                 </div>
             </section>
