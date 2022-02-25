@@ -3,12 +3,12 @@ import configValue from "./config";
 
 export default function App() {
     return (
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col sm:gap-1.5 md:gap-10">
             <header className="p-3 md:p-14 md:rounded-br-[145.5px] relative text-white text-center">
-                <h1 className="float-right md:absolute cursor-pointer rotate-[-25deg] top-3 right-5 headline">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                <h1 className="md:absolute cursor-pointer md:rotate-[-25deg] top-3 right-5 headline">
+                    <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                 </h1>
-                <h1 className="title">The Dynamics Theme</h1>
+                <h1 className="clear-both title">The Dynamics Theme</h1>
             </header>
 
             <section>
@@ -33,8 +33,8 @@ export default function App() {
             <section className="container-regular">
                 {/* Typography */}
                 <h1 className="heading mb-5">Text</h1>
-                <div className="md:grid grid-cols-2 rounded gap-2 shadow" id="typography">
-                    <div className="p-3 md:p-10">
+                <div className="lg:grid grid-cols-2 rounded gap-2 shadow" id="typography">
+                    <div className="p-3 md:p-10 md:pb-0 lg:pb-10">
                         <h1 className="heading">Heading</h1>
                         <h1 className="ultratitle">Ultratitle</h1>
                         <h1 className="title">Title</h1>
@@ -45,9 +45,9 @@ export default function App() {
                         <h1 className="lead">Lead</h1>
                         <h1 className="caption">Caption</h1>
                     </div>
-                    <div className="p-3 md:p-10">
+                    <div className="p-3 md:p-10 md:pt-0 lg:pt-10">
                         <h1 className="heading">Font</h1>
-                        <h1 className="text-60px md:text-66px">Myriad Pro</h1>
+                        <h1 className="text-60px md:text-66px leading-[50px]">Myriad Pro</h1>
                     </div>
                 </div>
             </section>
@@ -143,7 +143,7 @@ export default function App() {
                             <h1 className="text-24px md:text-42px">Translucent</h1>
                         </div>
                         <div className="card-translucent-dark">
-                            <h1 className="text-24px md:text-42px">TranslucentDark</h1>
+                            <h1 className="break-all text-24px md:text-42px">TranslucentDark</h1>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@ export default function App() {
             <section className="container-regular">
                 {/* Colors */}
                 <h1 className="heading mb-5">Colors</h1>
-                <div className="px-5 md:px-20">
+                <div className="px-5 lg:px-20">
                     <h1 className="heading mb-5">Primary Colors</h1>
                     <div className="md:grid grid-cols-3 gap-5 mb-10">
                         <div className="min-h-[120px] mb-2 md:mb-0 bg-deep-sky-blue font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
@@ -245,22 +245,22 @@ export default function App() {
                 <div className="outline-badge">Outline</div>
             </section>
 
-            <section className="container-regular">
+            <section className="container-regular" id="font-sizes">
                 {/* Font sizes */}
                 <h1 className="heading mb-5">Font sizes</h1>
                 <div className="md:flex flex-col">
-                    <div className="md:flex items-baseline leading-[170px]">
+                    <div className="flex flex-wrap md:flex-nowrap items-baseline leading-[170px]">
                         <div className="inline-block truncate text-198px">198px</div>
                         <div className="inline-block truncate text-156px">156px</div>
                     </div>
-                    <div className="md:flex gap-2 md:ml-5 items-baseline leading-[170px]">
+                    <div className="flex flex-wrap md:flex-nowrap gap-2 md:ml-5 items-baseline leading-[170px]">
                         <div className="inline-block truncate text-120px">120px</div>
                         <div className="inline-block truncate text-96px">96px</div>
                         <div className="inline-block truncate text-90px">90px</div>
                         <div className="inline-block truncate text-84px">84px</div>
                         <div className="inline-block truncate text-78px">78px</div>
                     </div>
-                    <div className="md:flex gap-3 md:ml-9 items-baseline leading-none">
+                    <div className="flex flex-wrap md:flex-nowrap gap-3 md:ml-9 items-baseline leading-none">
                         <div className="inline-block truncate text-72px">72px</div>
                         <div className="inline-block truncate text-66px">66px</div>
                         <div className="inline-block truncate text-60px">60px</div>

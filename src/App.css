@@ -1,3 +1,10 @@
 header {
     background: linear-gradient(180deg, #FFFFFF -85.1%, #03A9F4 100%);
 }
+
+@media screen and (max-width: 639.91px) {
+    /* sm */
+    .flex-wrap:nth-child(2) {
+        line-height: 100px;
+    }
+}

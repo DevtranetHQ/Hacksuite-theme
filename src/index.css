@@ -63,15 +63,15 @@
      * Typography
      */
     .heading {
-        @apply font-bold text-36px md:text-42px leading-[100px];
+        @apply font-bold text-36px md:text-42px md:leading-[100px];
     }
 
     .ultratitle {
-        @apply font-bold text-66px md:text-120px leading-[100px];
+        @apply font-bold text-66px md:text-120px leading-[80px] md:leading-[100px];
     }
 
     .title {
-        @apply font-bold text-60px md:text-66px;
+        @apply font-bold text-60px md:text-66px leading-[80px];
     }
 
     .subtitle {
@@ -102,11 +102,11 @@
      * Buttons
      */
     .button-big, .button-medium, .button-small {
-        @apply leading-snug flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
+        @apply leading-tight flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
     }
 
     .outline-button-big, .outline-button-medium, .outline-button-small {
-        @apply flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
+        @apply leading-tight flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
     }
 
     .cta-button-big, .cta-button-medium, .cta-button-small {
