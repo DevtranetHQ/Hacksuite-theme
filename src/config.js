@@ -112,15 +112,15 @@ const configValue = `module.exports = {
      * Typography
      */
     .heading {
-        @apply font-bold text-36px md:text-42px;
+        @apply font-bold text-36px md:text-42px md:leading-[100px];
     }
 
     .ultratitle {
-        @apply font-bold text-66px md:text-120px;
+        @apply font-bold text-66px md:text-120px leading-[80px] md:leading-[100px];
     }
 
     .title {
-        @apply font-bold text-60px md:text-66px;
+        @apply font-bold text-60px md:text-66px leading-[80px];
     }
 
     .subtitle {
@@ -151,11 +151,11 @@ const configValue = `module.exports = {
      * Buttons
      */
     .button-big, .button-medium, .button-small {
-        @apply leading-snug flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
+        @apply leading-tight flex items-center justify-center bg-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all hover:scale-105 focus:scale-105;
     }
 
     .outline-button-big, .outline-button-medium, .outline-button-small {
-        @apply flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
+        @apply leading-tight flex items-center justify-center border-[3px] border-deep-sky-blue font-bold px-5 py-2 mr-2 mb-2 rounded-md text-deep-sky-blue transition-all hover:scale-105 focus:scale-105;
     }
 
     .cta-button-big, .cta-button-medium, .cta-button-small {
@@ -246,7 +246,7 @@ const configValue = `module.exports = {
     }
 
     .form-select {
-        @apply appearance-none text-18px bg-white border-[#c1c1c1] border block w-full px-3 py-2 rounded;
+        @apply appearance-none text-18px text-body bg-white border-[#c1c1c1] border block w-full px-3 py-2 rounded;
         background-image: url("data:image/svg+xml,%3Csvg width='19' height='14' viewBox='0 0 19 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.78074 13.1229C8.86101 13.2395 8.96842 13.3348 9.09372 13.4006C9.21902 13.4665 9.35844 13.5009 9.49999 13.5009C9.64154 13.5009 9.78097 13.4665 9.90626 13.4006C10.0316 13.3348 10.139 13.2395 10.2192 13.1229L18.0942 1.74788C18.1854 1.61668 18.2388 1.463 18.2488 1.30356C18.2587 1.14411 18.2248 0.984983 18.1507 0.84347C18.0765 0.701957 17.965 0.583467 17.8283 0.500876C17.6915 0.418285 17.5347 0.374749 17.375 0.375001H1.62499C1.4656 0.375659 1.30941 0.419754 1.17321 0.502544C1.03701 0.585333 0.925955 0.703684 0.851988 0.84487C0.778021 0.986056 0.74394 1.14473 0.753411 1.30384C0.762882 1.46295 0.815546 1.61646 0.90574 1.74788L8.78074 13.1229Z' fill='black'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: right 2% center;
@@ -282,8 +282,12 @@ const configValue = `module.exports = {
         @apply appearance-none w-full h-[6px] rounded p-0 bg-[#a0a0a0] focus:outline-none focus:ring-0 focus:shadow-none;
     }
 
-    .form-range::-moz-range-thumb, .form-range::-webkit-slider-thumb {
-        @apply border-0 bg-deep-sky-blue rounded-full;
+    .form-range::-webkit-slider-thumb {
+        @apply appearance-none w-[18px] h-[18px] border-0 bg-deep-sky-blue rounded-full;
+    }
+
+    .form-range::-moz-range-thumb {
+        @apply appearance-none w-[18px] h-[18px] border-0 bg-deep-sky-blue rounded-full;
     }
 }
 

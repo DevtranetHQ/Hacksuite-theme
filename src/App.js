@@ -4,7 +4,7 @@ import configValue from "./config";
 export default function App() {
     return (
         <div className="flex flex-col sm:gap-1.5 md:gap-10">
-            <header className="p-3 md:p-14 md:rounded-br-[145.5px] relative text-white text-center">
+            <header className="p-3 md:p-16 md:rounded-br-[145.5px] relative text-white text-center">
                 <h1 className="md:absolute cursor-pointer md:rotate-[-25deg] top-3 right-5 headline">
                     <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                 </h1>
@@ -184,7 +184,7 @@ export default function App() {
                             </div>
                             <div>
                                 <h1 className="text-30px">Slider bar</h1>
-                                <input className="form-range" type="range"/>
+                                <input className="form-range" min="0" max="100" type="range"/>
                             </div>
                         </div>
                     </div>
@@ -198,30 +198,30 @@ export default function App() {
                 <div className="px-5 lg:px-20">
                     <h1 className="heading mb-5">Primary Colors</h1>
                     <div className="md:grid grid-cols-3 gap-5 mb-10">
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-deep-sky-blue font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-deep-sky-blue font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>Deep Sky Blue</h1>
                             <h1>#03A9F4</h1>
                         </div>
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-fruit-salad font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-fruit-salad font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>Fruit Salad</h1>
                             <h1>#4CAF50</h1>
                         </div>
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-orange-peel font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-orange-peel font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>Orange Peel</h1>
                             <h1>#FF9800</h1>
                         </div>
                     </div>
                     <h1 className="heading mb-5">Other Notable Colors</h1>
                     <div className="md:grid grid-cols-3 gap-5">
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-link font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-link font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>For links</h1>
                             <h1>#3B4FE4</h1>
                         </div>
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-heading font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-heading font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>For headings</h1>
                             <h1>#1A1A1A</h1>
                         </div>
-                        <div className="min-h-[120px] mb-2 md:mb-0 bg-body font-bold p-5 py-28 rounded text-center text-24px text-white uppercase">
+                        <div className="min-h-[120px] mb-2 md:mb-0 bg-body font-bold p-5 py-28 rounded-lg text-center text-24px text-white uppercase">
                             <h1>For body text</h1>
                             <h1>#6E7180</h1>
                         </div>
