@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import "./App.css";
 import configValue from "./config";
 
@@ -8,6 +9,14 @@ export default function App() {
 
     return (
         <div className={`${darkTheme ? "dark" : ""}`}>
+            <Helmet
+                meta={[
+                    {
+                        name: "theme-color",
+                        content: darkTheme ? "#202020" : "#ffffff"
+                    }
+                ]}
+            />
             <div className="dark:bg-dark">
                 <div className="flex flex-col sm:gap-1.5 md:gap-1.5 md:gap-10">
                     <header className="p-3 md:p-16 md:rounded-br-[145.5px] relative text-white text-center">
