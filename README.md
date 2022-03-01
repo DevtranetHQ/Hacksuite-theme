@@ -8,7 +8,7 @@ This is the theme for The Dynamics, built on top of [TailwindCSS](https://tailwi
 
 ## Using The Theme
 
-To use the theme in your own app, download the above files and merge them into your own app as you see fit. For example, this React app uses the following file structure so styles and fonts are applied globally:
+To use the theme in your own app, integrate TailwindCSS into your app and then download the above files and merge them into your own app as necessary. For example, this React app uses the following file structure so styles and fonts are applied globally:
 
 ```
 theme
@@ -21,6 +21,8 @@ theme
 │   └── ...
 └── ...
 ```
+
+If you are new to TailwindCSS and need help setting it up, please take a look at their [documentation](https://tailwindcss.com/docs/installation).
 
 ## App Specific Configurations
 
