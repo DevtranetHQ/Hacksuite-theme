@@ -1,5 +1,6 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: "class",
     theme: {
         extend: {
             colors: {
@@ -8,7 +9,9 @@ module.exports = {
                 "orange-peel": "#FF9800",
                 "link": "#3B4FE4",
                 "heading": "#1A1A1A",
-                "body": "#6E7180"
+                "body": "#6E7180",
+                "dark": "#202020",
+                "gray-dark": "#2D2D2D"
             }
         },
         fontFamily: {

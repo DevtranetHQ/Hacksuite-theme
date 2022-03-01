@@ -1,8 +1,8 @@
 {
   "name": "theme.thedynamics.tech",
-  "homepage": "https://theme.thedynamics.tech",
+  "homepage": "http://theme.thedynamics.tech",
   "version": "0.1.0",
-  "private": true,
+  "description": "Theme for The Dynamics",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
