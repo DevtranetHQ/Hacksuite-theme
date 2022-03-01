@@ -1,5 +1,6 @@
 const configValue = `module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: "class",
     theme: {
         extend: {
             colors: {
@@ -8,7 +9,9 @@ const configValue = `module.exports = {
                 "orange-peel": "#FF9800",
                 "link": "#3B4FE4",
                 "heading": "#1A1A1A",
-                "body": "#6E7180"
+                "body": "#6E7180",
+                "dark": "#202020",
+                "gray-dark": "#2D2D2D"
             }
         },
         fontFamily: {
@@ -95,7 +98,7 @@ const configValue = `module.exports = {
      * Code components
      */
     code {
-        @apply bg-[#ededed] rounded px-1 pt-1 font-sans text-deep-sky-blue;
+        @apply bg-[#ededed] dark:bg-[#1c1c1c] rounded px-1 pt-1 font-sans text-deep-sky-blue;
     }
 
     code a {
@@ -103,7 +106,7 @@ const configValue = `module.exports = {
     }
 
     pre {
-        @apply bg-[#e0e0e0] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[20px] md:text-[22px] text-[#4d4d4d];
+        @apply bg-[#e0e0e0] bg-[#cfcfcf] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[20px] md:text-[22px] text-[#4d4d4d];
     }
 }
 
@@ -186,6 +189,10 @@ const configValue = `module.exports = {
         @apply bg-white shadow-md;
     }
 
+    .card-primary, .card-interactive {
+        @apply dark:bg-gray-dark dark:shadow-black dark:shadow-sm;
+    }
+
     .card-sunken {
         @apply bg-[#a3a3a3];
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -210,7 +217,7 @@ const configValue = `module.exports = {
     }
 
     .card-translucent {
-        @apply bg-[#f1f1f1];
+        @apply bg-[#f1f1f1] dark:text-black;
     }
 
     .card-translucent-dark {
@@ -232,7 +239,7 @@ const configValue = `module.exports = {
      * Form components
      */
     form {
-        @apply bg-[#E8E8E8] p-5 md:p-10 rounded;
+        @apply bg-[#E8E8E8] dark:bg-[#444444] p-10 rounded;
     }
 
     .form-button {
@@ -263,19 +270,21 @@ const configValue = `module.exports = {
     }
 
     .form-checkbox input[type="checkbox"] {
-        @apply appearance-none h-[20px] w-[20px] border-2 border-[#1a1a1a] rounded-sm bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
+        @apply dark:bg-white appearance-none h-[20px] w-[20px] border-2 border-[#1a1a1a] rounded-sm bg-transparent checked:bg-deep-sky-blue checked:dark:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
     }
 
     .form-checkbox input[type="checkbox"]:checked {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+        background-size: 18px 18px;
     }
 
     .form-radio input[type="radio"] {
-        @apply appearance-none rounded-full h-[20px] w-[20px] border-2 border-[#1a1a1a] bg-transparent checked:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
+        @apply dark:bg-white appearance-none rounded-full h-[20px] w-[20px] border-2 border-[#1a1a1a] bg-transparent checked:bg-deep-sky-blue checked:dark:bg-deep-sky-blue checked:border-deep-sky-blue focus:outline-none bg-no-repeat bg-center bg-contain float-left cursor-pointer;
     }
 
     .form-radio input[type="radio"]:checked {
         background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22-4 -4 8 8%22%3E%3Ccircle r=%222%22 fill=%22%23fff%22/%3E%3C/svg%3E");
+        background-size: 18px 18px;
     }
 
     .form-range {
@@ -296,19 +305,23 @@ const configValue = `module.exports = {
      * Containers
      */
     .container-screen {
-        @apply box-border mx-auto my-3 w-full md:max-w-screen p-3;
+        @apply box-border mx-auto my-3 w-full md:max-w-screen p-5 md:p-3 dark:bg-dark dark:text-white;
     }
 
     .container-regular {
-        @apply mx-auto my-3 w-full md:max-w-regular p-3;
+        @apply mx-auto my-3 w-full md:max-w-regular p-5 md:p-3 dark:bg-dark dark:text-white;
     }
 
     .container-medium {
-        @apply mx-auto my-3 w-full md:max-w-medium p-3;
+        @apply mx-auto my-3 w-full md:max-w-medium p-5 md:p-3 dark:bg-dark dark:text-white;
     }
 
     .container-small {
-        @apply mx-auto my-3 w-full md:max-w-small p-3;
+        @apply mx-auto my-3 w-full md:max-w-small p-5 md:p-3 dark:bg-dark dark:text-white;
+    }
+
+    .container-gray-dark{
+        @apply dark:bg-gray-dark;
     }
 }`;
 
