@@ -16,7 +16,7 @@ export default function App() {
                                 <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                             }
                             {darkTheme &&
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007s-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414l2.121-2.121l1.414 1.414zM16.242 6.344l2.122-2.122l1.414 1.414l-2.122 2.122zM6.344 7.759L4.223 5.637l1.415-1.414l2.12 2.122zm13.434 10.605l-1.414 1.414l-2.122-2.122l1.414-1.414z"/></svg>
+                                <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007s-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414l2.121-2.121l1.414 1.414zM16.242 6.344l2.122-2.122l1.414 1.414l-2.122 2.122zM6.344 7.759L4.223 5.637l1.415-1.414l2.12 2.122zm13.434 10.605l-1.414 1.414l-2.122-2.122l1.414-1.414z"/></svg>
                             }
                         </h1>
                         <h1 className="clear-both title">The Dynamics Theme</h1>
@@ -45,7 +45,7 @@ export default function App() {
                         {/* Typography */}
                         <h1 className="heading mb-5">Text</h1>
                         <div className="container-gray-dark lg:grid grid-cols-2 rounded gap-2 shadow" id="typography">
-                            <div className="p-3 md:p-10 md:pb-0 lg:pb-10">
+                            <div className="p-9 md:p-10 pb-3 md:pb-0 lg:pb-10">
                                 <h1 className="heading">Heading</h1>
                                 <h1 className="ultratitle">Ultratitle</h1>
                                 <h1 className="title">Title</h1>
@@ -56,9 +56,9 @@ export default function App() {
                                 <h1 className="lead">Lead</h1>
                                 <h1 className="caption">Caption</h1>
                             </div>
-                            <div className="p-3 md:p-10 md:pt-0 lg:pt-10">
+                            <div className="p-9 md:p-10 pt-0 lg:pt-10">
                                 <h1 className="heading">Font</h1>
-                                <h1 className="text-60px md:text-66px leading-[50px]">Myriad Pro</h1>
+                                <h1 className="text-60px md:text-66px leading-[60px]">Myriad Pro</h1>
                             </div>
                         </div>
                     </section>
@@ -132,7 +132,7 @@ export default function App() {
                         {/* Cards */}
                         <h1 className="heading mb-5">Cards</h1>
                         <div className="container-gray-dark md:grid grid-cols-2 rounded gap-2 shadow">
-                            <div className="p-3 md:p-10">
+                            <div className="p-9 md:p-10 pb-3 md:pb-10">
                                 <div className="card-primary">
                                     <h1 className="text-24px md:text-42px">Primary</h1>
                                 </div>
@@ -149,7 +149,7 @@ export default function App() {
                                     <h1 className="text-24px md:text-42px">Gradient BG</h1>
                                 </div>
                             </div>
-                            <div className="p-3 md:p-10">
+                            <div className="p-9 md:p-10 pt-0 md:pt-10">
                                 <div className="card-translucent">
                                     <h1 className="text-24px md:text-42px">Translucent</h1>
                                 </div>
@@ -243,7 +243,7 @@ export default function App() {
                     <section className="container-regular">
                         {/* Sample paragraph */}
                         <h1 className="heading mb-5">Sample paragraph text</h1>
-                        <div className="container-gray-dark rounded p-3 md:p-10 shadow">
+                        <div className="container-gray-dark rounded p-5 md:p-10 shadow">
                             <p className="mb-2">This is a whole paragraph of text, include <code>code like this</code>, as well as <code><a href="https://theme.thedynamics.tech">linked code</a></code> & <a href="https://theme.thedynamics.tech">regular links</a>. The paragraph ended up being 1 sentence, but now I guess it’s <b>two</b>.</p>
                             <pre>Here's a code block! No highlighting to be found.</pre>
                         </div>
@@ -271,7 +271,7 @@ export default function App() {
                                 <div className="inline-block truncate text-84px">84px</div>
                                 <div className="inline-block truncate text-78px">78px</div>
                             </div>
-                            <div className="flex flex-wrap md:flex-nowrap gap-3 md:ml-9 items-baseline leading-none">
+                            <div className="flex flex-wrap md:flex-nowrap gap-2 md:ml-9 items-baseline leading-none">
                                 <div className="inline-block truncate text-72px">72px</div>
                                 <div className="inline-block truncate text-66px">66px</div>
                                 <div className="inline-block truncate text-60px">60px</div>
