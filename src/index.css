@@ -54,7 +54,7 @@
     }
 
     pre {
-        @apply bg-[#e0e0e0] bg-[#cfcfcf] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[20px] md:text-[22px] text-[#4d4d4d];
+        @apply bg-[#e0e0e0] dark:bg-[#2d2d2d] rounded px-5 py-3 font-sans leading-[1.75rem] overflow-auto text-[20px] md:text-[22px] text-[#4d4d4d] dark:text-white;
     }
 }
 
