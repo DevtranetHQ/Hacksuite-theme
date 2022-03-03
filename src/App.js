@@ -19,8 +19,8 @@ export default function App() {
             />
             <div className="dark:bg-dark">
                 <div className="flex flex-col sm:gap-1.5 md:gap-1.5 md:gap-10">
-                    <header className="p-3 md:p-16 md:rounded-br-[145.5px] relative text-white text-center">
-                        <h1 className="md:absolute cursor-pointer md:rotate-[-25deg] top-3 right-5 headline" onClick={toggleDarkTheme}>
+                    <header className="px-1 pt-1 pb-6 md:p-16 rounded-br-[43.2458px] md:rounded-br-[145.5px] relative text-white text-center">
+                        <h1 className="md:absolute cursor-pointer md:rotate-[-25deg] top-3 right-5 subheadline md:headline" onClick={toggleDarkTheme}>
                             {!darkTheme &&
                                 <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M31 27.19a1 1 0 0 0-1-.56h-.85a11 11 0 0 1-4.23-21.02a1 1 0 0 0 .61-1a1 1 0 0 0-.67-.91a14.7 14.7 0 0 0-5-.87a15.12 15.12 0 0 0 0 30.24a14.78 14.78 0 0 0 11-4.81a1 1 0 0 0 .14-1.07Zm-11.11 3.93a13.12 13.12 0 0 1 0-26.24a11.81 11.81 0 0 1 2 .16a13 13 0 0 0 5.72 23.53a12.75 12.75 0 0 1-7.72 2.55Z"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                             }
@@ -28,7 +28,7 @@ export default function App() {
                                 <svg className="float-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007s-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414l2.121-2.121l1.414 1.414zM16.242 6.344l2.122-2.122l1.414 1.414l-2.122 2.122zM6.344 7.759L4.223 5.637l1.415-1.414l2.12 2.122zm13.434 10.605l-1.414 1.414l-2.122-2.122l1.414-1.414z"/></svg>
                             }
                         </h1>
-                        <h1 className="clear-both title">The Dynamics Theme</h1>
+                        <h1 className="clear-both font-bold text-30px md:text-66px">The Dynamics Theme</h1>
                     </header>
 
                     <section>

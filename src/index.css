@@ -67,7 +67,7 @@
     }
 
     .ultratitle {
-        @apply font-bold text-66px md:text-120px leading-[80px] md:leading-[100px];
+        @apply font-bold text-60px sm:text-66px md:text-120px leading-[80px] md:leading-[100px];
     }
 
     .title {
