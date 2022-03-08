@@ -22,7 +22,16 @@ theme
 └── ...
 ```
 
-If you are new to TailwindCSS and need help setting it up, please take a look at their [documentation](https://tailwindcss.com/docs/installation).
+If you are new to TailwindCSS and need help setting it up, please take a look at their [documentation](https://tailwindcss.com/docs/installation). You may need to edit this line in `tailwind.config.js` so TailwindCSS is applied to your app:
+
+```javascript
+...
+    // Replace with paths to your template files
+    content: ["./pages/**/*.{js,jsx,ts,tsx},./components/**/*.{js,jsx,ts,tsx}"],
+...
+```
+
+For another example of integration, check out the [NextJS app](https://github.com/TheDynamics/app) that powers our front-end and back-end. In the app, we've changed both `tailwind.config.js` and `index.css` to work with NextJS.
 
 ## App Specific Configurations
 

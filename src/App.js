@@ -291,6 +291,7 @@ export default function App() {
                                 <div className="inline-block truncate text-30px">30px</div>
                                 <div className="inline-block truncate text-24px">24px</div>
                                 <div className="inline-block truncate text-18px">18px</div>
+                                <div className="inline-block truncate text-16px">16px</div>
                                 <div className="inline-block truncate text-12px">12px</div>
                             </div>
                         </div>
