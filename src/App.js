@@ -77,13 +77,13 @@ export default function App() {
                         <h1 className="heading mb-5">Primary buttons</h1>
                         <div className="md:grid grid-cols-3 items-center">
                             <div>
-                                <button className="button-big">Big button</button>
+                                <button className="button-big button-deep-sky-blue">Big button</button>
                             </div>
                             <div>
-                                <button className="button-medium">Medium button</button>
+                                <button className="button-medium button-deep-sky-blue">Medium button</button>
                             </div>
                             <div>
-                                <button className="button-small">Small button</button>
+                                <button className="button-small button-deep-sky-blue">Small button</button>
                             </div>
                         </div>
                     </section>
@@ -93,13 +93,13 @@ export default function App() {
                         <h1 className="heading mb-5">Other buttons</h1>
                         <div className="md:grid grid-cols-3 gap-y-5 items-center">
                             <div>
-                                <button className="outline-button-big">Big outline button</button>
+                                <button className="outline-button-big button-deep-sky-blue">Big outline button</button>
                             </div>
                             <div>
-                                <button className="outline-button-medium">Medium outline button</button>
+                                <button className="outline-button-medium button-deep-sky-blue">Medium outline button</button>
                             </div>
                             <div>
-                                <button className="outline-button-small">Small outline button</button>
+                                <button className="outline-button-small button-deep-sky-blue">Small outline button</button>
                             </div>
                             <div>
                                 <button className="cta-button-big">Big cta button</button>
