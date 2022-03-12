@@ -2,9 +2,9 @@
 
 This is the theme for The Dynamics, built on top of [TailwindCSS](https://tailwindcss.com/). To get started, you can either clone this React app and tweak it to your needs, or you can download the following files individually from this repository:
 
-* `fonts` folder, located in `public/fonts`
-* `tailwind.config.js`, which contains our custom configuration options for TailwindCSS, including default fonts, theme colors, and so forth
-* `index.css` in `src/index.css`, which contains custom styles and classes built on top of TailwindCSS through the use of `@apply` directives.
+-   `fonts` folder, located in `public/fonts`
+-   `tailwind.config.js`, which contains our custom configuration options for TailwindCSS, including default fonts, theme colors, and so forth
+-   `index.css` in `src/index.css`, which contains custom styles and classes built on top of TailwindCSS through the use of `@apply` directives.
 
 ## Using The Theme
 

@@ -15,8 +15,8 @@ module.exports = {
             }
         },
         fontFamily: {
-            "sans": ['"Myriad Pro"', "sans-serif"],
-            "body": ['"Myriad Pro"']
+            sans: ['"Myriad Pro"', "sans-serif"],
+            body: ['"Myriad Pro"']
         },
         fontSize: {
             "198px": ["198px"],
@@ -41,13 +41,11 @@ module.exports = {
             "12px": ["12px"]
         },
         maxWidth: {
-            "screen": "100%",
-            "regular": "95%",
-            "medium": "75%",
-            "small": "50%"
+            screen: "100%",
+            regular: "95%",
+            medium: "75%",
+            small: "50%"
         }
     },
-    plugins: [
-        require("autoprefixer")
-    ]
+    plugins: [require("autoprefixer")]
 };
