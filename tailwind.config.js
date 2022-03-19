@@ -38,7 +38,16 @@ module.exports = {
             "18px": ["18px"],
             "16px": ["16px"],
             "15px": ["15px"],
-            "12px": ["12px"]
+            "12px": ["12px"],
+            "8px": ["8px"]
+        },
+        screens: {
+            "xs": "428px",
+            "sm": "640px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1280px",
+            "2xl": "1536px"
         },
         maxWidth: {
             screen: "100%",

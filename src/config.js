@@ -15,8 +15,8 @@ const configValue = `module.exports = {
             }
         },
         fontFamily: {
-            "sans": ['"Myriad Pro"', "sans-serif"],
-            "body": ['"Myriad Pro"']
+            sans: ['"Myriad Pro"', "sans-serif"],
+            body: ['"Myriad Pro"']
         },
         fontSize: {
             "198px": ["198px"],
@@ -38,18 +38,25 @@ const configValue = `module.exports = {
             "18px": ["18px"],
             "16px": ["16px"],
             "15px": ["15px"],
-            "12px": ["12px"]
+            "12px": ["12px"],
+            "8px": ["8px"]
+        },
+        screens: {
+            "xs": "428px",
+            "sm": "640px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1280px",
+            "2xl": "1536px"
         },
         maxWidth: {
-            "screen": "100%",
-            "regular": "95%",
-            "medium": "75%",
-            "small": "50%"
+            screen: "100%",
+            regular: "95%",
+            medium: "75%",
+            small: "50%"
         }
     },
-    plugins: [
-        require("autoprefixer")
-    ]
+    plugins: [require("autoprefixer")]
 };
 
 @import "tailwindcss/base";
@@ -88,19 +95,23 @@ const configValue = `module.exports = {
         @apply text-link;
     }
 
-    body, html {
-        @apply overflow-x-hidden;
+    body,
+    html {
+        @apply overflow-x-hidden scroll-smooth;
     }
 
-    p {
+    p,
+    ul {
         @apply text-[20px] md:text-[22px];
     }
 
-    p.sm {
+    p.sm,
+    ul.sm {
         @apply text-18px;
     }
 
-    p.xs {
+    p.xs,
+    ul.xs {
         @apply text-16px;
     }
 
@@ -121,6 +132,18 @@ const configValue = `module.exports = {
 }
 
 @layer components {
+    .prose {
+        max-width: none !important;
+    }
+
+    .prose a {
+        @apply text-link;
+    }
+
+    .prose p {
+        @apply my-0 !important;
+    }
+
     /*
      * Typography
      */
@@ -157,85 +180,141 @@ const configValue = `module.exports = {
     }
 
     .caption {
-        @apply text-18px text-body;
+        @apply text-18px text-body dark:text-white;
     }
 
     /*
      * Buttons
      */
-     .button-big, .button-medium, .button-small {
-         @apply leading-tight flex items-center justify-center font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all;
-     }
+    .button-big,
+    .button-medium,
+    .button-small {
+        @apply leading-tight flex items-center justify-center font-bold px-5 py-2 mr-2 mb-2 rounded-md text-white transition-all;
+    }
 
-     .button-big.button-deep-sky-blue, .button-medium.button-deep-sky-blue, .button-small.button-deep-sky-blue {
-         @apply bg-deep-sky-blue;
-     }
+    .button-big.button-deep-sky-blue,
+    .button-medium.button-deep-sky-blue,
+    .button-small.button-deep-sky-blue {
+        @apply bg-deep-sky-blue;
+    }
 
-     .button-big.button-fruit-salad, .button-medium.button-fruit-salad, .button-small.button-fruit-salad {
-         @apply bg-fruit-salad;
-     }
+    .button-big.button-fruit-salad,
+    .button-medium.button-fruit-salad,
+    .button-small.button-fruit-salad {
+        @apply bg-fruit-salad;
+    }
 
-     .button-big.button-orange-peel, .button-medium.button-orange-peel, .button-small.button-orange-peel {
-         @apply bg-orange-peel;
-     }
+    .button-big.button-orange-peel,
+    .button-medium.button-orange-peel,
+    .button-small.button-orange-peel {
+        @apply bg-orange-peel;
+    }
 
-     .button-big.button-link, .button-medium.button-link, .button-small.button-link {
-         @apply bg-link;
-     }
+    .button-big.button-link,
+    .button-medium.button-link,
+    .button-small.button-link {
+        @apply bg-link;
+    }
 
-     .outline-button-big, .outline-button-medium, .outline-button-small {
-         @apply leading-tight flex items-center justify-center border-[3px] font-bold px-5 py-2 mr-2 mb-2 rounded-md transition-all;
-     }
+    .button-big.button-heading,
+    .button-medium.button-heading,
+    .button-small.button-heading {
+        @apply bg-heading;
+    }
 
-     .outline-button-big.button-deep-sky-blue .outline-button-medium.button-deep-sky-blue .outline-button-small.button-deep-sky-blue {
-         @apply border-deep-sky-blue text-deep-sky-blue;
-     }
+    .outline-button-big,
+    .outline-button-medium,
+    .outline-button-small {
+        @apply leading-tight flex items-center justify-center border-[3px] font-bold px-5 py-2 mr-2 mb-2 rounded-md transition-all;
+    }
 
-     .outline-button-big.button-fruit-salad .outline-button-medium.button-fruit-salad .outline-button-small.button-fruit-salad {
-         @apply border-fruit-salad text-fruit-salad;
-     }
+    .outline-button-big.button-deep-sky-blue,
+    .outline-button-medium.button-deep-sky-blue,
+    .outline-button-small.button-deep-sky-blue {
+        @apply border-deep-sky-blue text-deep-sky-blue;
+    }
 
-     .outline-button-big.button-orange-peel .outline-button-medium.button-orange-peel .outline-button-small.button-orange-peel {
-         @apply border-orange-peel text-orange-peel;
-     }
+    .outline-button-big.button-fruit-salad,
+    .outline-button-medium.button-fruit-salad,
+    .outline-button-small.button-fruit-salad {
+        @apply border-fruit-salad text-fruit-salad;
+    }
 
-     .outline-button-big.button-link .outline-button-medium.button-link .outline-button-small.button-link {
-         @apply border-link text-link;
-     }
+    .outline-button-big.button-orange-peel,
+    .outline-button-medium.button-orange-peel,
+    .outline-button-small.button-orange-peel {
+        @apply border-orange-peel text-orange-peel;
+    }
 
-     .cta-button-big, .cta-button-medium, .cta-button-small {
-         @apply leading-tight flex items-center justify-center font-bold px-3 py-2 mr-2 mb-2 rounded-md text-white transition-all;
-         background: linear-gradient(98.64deg, #FFFFFF -26.46%, #03A9F4 56.71%);
-     }
+    .outline-button-big.button-link,
+    .outline-button-medium.button-link,
+    .outline-button-small.button-link {
+        @apply border-link text-link;
+    }
 
-     .button-big:not(:disabled), .button-medium:not(:disabled), .button-small:not(:disabled), .outline-button-big:not(:disabled), .outline-button-medium:not(:disabled), .outline-button-small:not(:disabled), .cta-button-big:not(:disabled), .cta-button-medium:not(:disabled), .cta-button-small:not(:disabled) {
-         @apply hover:scale-105 focus:scale-105;
-     }
+    .outline-button-big.button-heading,
+    .outline-button-medium.button-heading,
+    .outline-button-small.button-heading {
+        @apply border-heading text-heading;
+    }
 
-     .button-big, .outline-button-big, .cta-button-big {
-         @apply text-30px md:text-36px;
-     }
+    .cta-button-big,
+    .cta-button-medium,
+    .cta-button-small {
+        @apply leading-tight flex items-center justify-center font-bold px-3 py-2 mr-2 mb-2 rounded-md text-white transition-all;
+        background: linear-gradient(98.64deg, #ffffff -26.46%, #03a9f4 56.71%);
+    }
 
-     .button-medium, .outline-button-medium, .cta-button-medium, form button {
-         @apply text-24px;
-     }
+    .button-big:not(:disabled),
+    .button-medium:not(:disabled),
+    .button-small:not(:disabled),
+    .outline-button-big:not(:disabled),
+    .outline-button-medium:not(:disabled),
+    .outline-button-small:not(:disabled),
+    .cta-button-big:not(:disabled),
+    .cta-button-medium:not(:disabled),
+    .cta-button-small:not(:disabled) {
+        @apply hover:scale-105 focus:scale-105;
+    }
 
-     .button-small, .outline-button-small, .cta-button-small {
-         @apply text-18px;
-     }
+    .button-big,
+    .outline-button-big,
+    .cta-button-big {
+        @apply text-30px md:text-36px h-[58px] md:h-[64px];
+    }
+
+    .button-medium,
+    .outline-button-medium,
+    .cta-button-medium,
+    form button {
+        @apply text-24px h-[44px];
+    }
+
+    .button-small,
+    .outline-button-small,
+    .cta-button-small {
+        @apply text-18px h-[42px];
+    }
 
     /*
      * Cards
      */
-    .card-primary, .card-sunken, .card-interactive, .card-gradient-text, .card-gradient {
+    .card-primary,
+    .card-sunken,
+    .card-interactive,
+    .card-gradient-text,
+    .card-gradient {
         @apply mb-5 p-3 rounded text-center;
     }
 
-    .card-primary, .card-interactive, .card-gradient-text {
+    .card-primary,
+    .card-interactive,
+    .card-gradient-text {
         @apply bg-white shadow-md;
     }
 
-    .card-primary, .card-interactive {
+    .card-primary,
+    .card-interactive {
         @apply dark:bg-gray-dark dark:shadow-black dark:shadow-sm;
     }
 
@@ -249,16 +328,17 @@ const configValue = `module.exports = {
     }
 
     .card-gradient-text h1 {
-        background: linear-gradient(94.14deg, #FFFFFF -48.74%, #03A9F4 57.74%);
+        background: linear-gradient(94.14deg, #ffffff -48.74%, #03a9f4 57.74%);
         @apply text-transparent bg-clip-text;
     }
 
     .card-gradient {
         @apply text-white;
-        background: linear-gradient(96.34deg, #F8FBFF -27.94%, #03A9F4 59.6%);
+        background: linear-gradient(96.34deg, #f8fbff -27.94%, #03a9f4 59.6%);
     }
 
-    .card-translucent, .card-translucent-dark {
+    .card-translucent,
+    .card-translucent-dark {
         @apply mb-5 p-10 text-center;
     }
 
@@ -294,11 +374,11 @@ const configValue = `module.exports = {
 
     .form-button {
         @apply flex items-center justify-center min-w-[64%] bg-deep-sky-blue font-bold px-5 py-1 mx-auto rounded-md text-white text-24px transition-all hover:scale-105 focus:scale-105;
-        background: linear-gradient(98.64deg, #FFFFFF -26.46%, #03A9F4 56.71%);
+        background: linear-gradient(98.64deg, #ffffff -26.46%, #03a9f4 56.71%);
     }
 
     .form-input {
-        @apply text-18px bg-white border-[#c9c9c9] border-2 block w-full px-3 py-2 mt-1 mb-4 rounded;
+        @apply dark:text-black text-18px bg-white border-[#c9c9c9] border-2 block w-full px-3 py-2 mt-1 mb-4 rounded;
         outline: none !important;
     }
 
@@ -315,7 +395,8 @@ const configValue = `module.exports = {
         outline: none !important;
     }
 
-    .form-checkbox, .form-radio {
+    .form-checkbox,
+    .form-radio {
         @apply cursor-pointer flex gap-1 md:gap-2 items-center text-18px leading-[18px];
     }
 
@@ -374,7 +455,7 @@ const configValue = `module.exports = {
         @apply mx-auto my-3 w-full md:max-w-small p-5 md:p-3 dark:bg-dark dark:text-white;
     }
 
-    .container-gray-dark{
+    .container-gray-dark {
         @apply dark:bg-gray-dark;
     }
 }`;
